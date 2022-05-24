@@ -1,0 +1,19 @@
+
+//&display=swap&subset=cyrilic-ext
+
+//ПЕРЕМЕННЫЕ
+$fontFamily: "Evolventa";
+$mainColor: #AD2A47;
+$black: #000;
+
+
+// import
+
+@import "fonts";
+@import "null";
+@import "mixin";
+@import "ui";
+@import "header";
+@import "main";
+@import "footer";
+

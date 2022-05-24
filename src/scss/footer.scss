@@ -1,0 +1,118 @@
+.footer {
+
+    // .footer__body
+
+    &__body {
+        display: flex;
+        @media (max-width: 991px) {
+            display: block;
+        }
+    }
+
+    // .footer__map
+
+    &__map{
+        flex: 0 0 50%;
+        height: auto;
+        @media (max-width: 991px) {
+            width: 100%;
+            height: 450px;
+        }
+    }
+
+    // .footer__content
+
+    &__content {
+        flex: 0 0 50%;
+        background-color: $black;
+        padding: 50px 0 30px 50px;
+        @media (max-width: 576px) {
+            padding: 36px 18px 30px 38px;
+        }
+    }
+
+    // .footer__logo
+
+    &__logo {
+        @include adaptiv-value('margin-bottom', 55, 37, 1);
+    }
+
+    // .footer__list
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+        @include adaptiv-value('margin-bottom', 63, 49, 1);
+    }
+
+    // .footer__item
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+    }
+
+    // .footer__block-icon
+
+    &__block-icon {
+        width: 31px;
+        height: 31px;
+        border-radius: 50%;
+        background-color: $mainColor;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // .footer__text
+
+    &__text {
+        color: #fff;
+    }
+
+    // .footer__decor-reverse
+
+    &__decor-reverse {
+        transform: rotate(180deg);
+        display: inline-block;
+        margin-bottom: 55px;
+    }
+
+    // .footer__info
+
+    &__info {
+        max-width: 634px;
+        margin-bottom: 34px;
+    }
+
+    // .footer__info-text
+
+    &__info-text {
+        font-size: 15px;
+        line-height: 173%;
+        color: #FFFFFF;
+    }
+
+    // .footer__decor
+
+    &__decor {
+        margin-bottom: 45px;
+        @include adaptiv-value('margin-bottom', 45, 40, 1);
+    }
+
+    // .footer__end
+
+    &__end {      
+    }
+
+    // .footer__end-text
+
+    &__end-text {
+        font-size: 15px;
+        line-height: 173%;
+        color: #FFFFFF;          
+    }
+}

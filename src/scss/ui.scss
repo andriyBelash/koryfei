@@ -1,0 +1,163 @@
+._container{
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 0 15px;
+
+}
+._small-container{
+	max-width: 805px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+._large-container{
+	max-width: 1230px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+._ibg{
+	position: relative;
+	img{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}
+.page{
+	background-color: #FDFDFD;
+	@include adaptiv-value('padding-bottom', 57, 20, 1);
+}
+
+.btn {
+	background-color: $mainColor;
+	border-radius: 100px;
+	display: inline-flex;
+	align-items: center;
+}
+
+// ._block-title
+
+._block-title {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 30px;
+	@media (max-width: 576px) {
+		gap: 15px;
+	}
+	.title {
+		font-weight: 700;
+		font-size: 35px;
+		line-height: calc(47 / 36 * 100%);
+		color: #000000;
+		@media (max-width: 576px) {
+			font-size: 20px;
+		}
+		
+	}
+	img{
+		@media (max-width: 576px) {
+			width: 187px;
+		}
+	}
+}
+.bold{
+	font-weight: 700;
+	font-size: 24px;
+	line-height: calc(32 / 24 * 100%);
+}
+
+.bershka{
+	@media (max-width: 576px) {
+		width: 137px;
+		height: 62px;
+	}
+}
+.coca-cola{
+	@media (max-width: 576px) {
+		width: 122px;
+		height: 55px;
+	}
+}
+.adidas{
+	@media (max-width: 576px) {
+		width: 76px;
+		height: 52px;
+	}
+}
+.group{
+	@media (max-width: 576px) {
+		width: 57px;
+		height: 57px;
+	}
+}
+.windows{
+	@media (max-width: 576px) {
+		width: 77px;
+		height: 71px;
+	}
+}
+.ambridge{
+	@media (max-width: 576px) {
+		width: 175px;
+		height: 68px;
+	}
+}
+
+body{
+	overflow: visible;
+	&._active{
+		overflow: hidden;
+	}
+}
+
+.animation{
+	transform: translate(0px, 120%);
+    opacity: 0;
+	&._active{
+		transition: all 0.5s ease;
+		transform: translate(0px, 0px);
+		opacity: 1;
+	}
+}
+//==========================================================================================================================================
+// swiper
+
+._swiper {
+	overflow: hidden;
+	//.swiper-wrapper
+	.swiper-wrapper {
+		width: 100%;
+		height: 100%;
+		box-sizing: content-box;
+		display: flex;
+		position: relative;
+	}
+	&.swiper-container-vertical {
+		.swiper-wrapper {
+			flex-direction: column;
+		}
+	}
+	&.swiper-container-autoheight {
+		.swiper-wrapper {
+			align-items: flex-start;
+		}
+	}
+}
+.swiper-container-initialized {
+	.swiper-slide {
+		flex-shrink: 0;
+		// transition-property: transform;
+	}
+}
+.swiper-container-android {
+	.swiper-slide,
+	.swiper-wrapper {
+		transform: translate3d(0px, 0, 0);
+	}
+}
+.swiper-button-lock {
+	display: none !important;
+}
